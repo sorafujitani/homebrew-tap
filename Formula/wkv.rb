@@ -5,21 +5,21 @@
 class Wkv < Formula
   desc "Fuzzy-searchable TUI viewer for wezterm keybindings"
   homepage "https://github.com/sorafujitani/wezterm-keymap-viewer"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.7/wkv_darwin_amd64.tar.gz"
-      sha256 "dafeb5d25a61d2c5651c778487adf5d7c4f1f32825824ece62143cf4c1431161"
+      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.8/wkv_darwin_amd64.tar.gz"
+      sha256 "7b8f409053d4b4e03e4a15388c5a1ec81b617bbd9f962401602c7367dc1d1633"
 
       def install
         bin.install "wkv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.7/wkv_darwin_arm64.tar.gz"
-      sha256 "8ab6570fbc2a72b0383b928920af6cc6780362abf3d7ba88ec7be4aa1c2e1b64"
+      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.8/wkv_darwin_arm64.tar.gz"
+      sha256 "6734cf9829f5f96e6dd118d73ceeb7501c002f133683636bf2fe375c209d8538"
 
       def install
         bin.install "wkv"
@@ -29,15 +29,15 @@ class Wkv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.7/wkv_linux_amd64.tar.gz"
-      sha256 "09c7592b4772656d03a8ed40480d31b1b7690d5b1cc0ed7dbbcbe6abb3c90c6a"
+      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.8/wkv_linux_amd64.tar.gz"
+      sha256 "3630a51073e763c67180e1557f8a7a8438eae12ed9873c69fcb00a0d95eeff4b"
       def install
         bin.install "wkv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.7/wkv_linux_arm64.tar.gz"
-      sha256 "5d29097a94a6d757ae4d48732db235e07c50318acb9dcf5d5b6aac1d417e10e9"
+      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.8/wkv_linux_arm64.tar.gz"
+      sha256 "471a62ed2bc1f5eb38318d9cd10b4906a60f0e092631774fa8b97fbe1d763665"
       def install
         bin.install "wkv"
       end
