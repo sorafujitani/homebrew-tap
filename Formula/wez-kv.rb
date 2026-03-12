@@ -5,23 +5,23 @@
 class WezKv < Formula
   desc "Fuzzy-searchable TUI viewer for wezterm keybindings"
   homepage "https://github.com/sorafujitani/wezterm-keymap-viewer"
-  version "0.1.12"
+  version "0.1.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.12/wkv_darwin_amd64.tar.gz"
-      sha256 "64fa1f5de9be21f0f21ea5cab2c06100e66995a2105e000ec1db9625094e3f6b"
+      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.13/wkv_darwin_amd64.tar.gz"
+      sha256 "d2265b9d395381d18f8b5f983d1e88eb8a3b1df588fc77ee318800e4f14f34fb"
 
-      def install
+      define_method(:install) do
         bin.install "wkv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.12/wkv_darwin_arm64.tar.gz"
-      sha256 "e1a5bc3166684d404834fe9a50310a4a60217cea73828e68df564fa3bee92ea8"
+      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.13/wkv_darwin_arm64.tar.gz"
+      sha256 "7ea3e0da6f2341bec49b38c8514bf0421d1f40c302f28d064be45eead128fb6e"
 
-      def install
+      define_method(:install) do
         bin.install "wkv"
       end
     end
@@ -29,16 +29,16 @@ class WezKv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.12/wkv_linux_amd64.tar.gz"
-      sha256 "ae46593999b2748e78b5f9a7e11ed7bae949c0b8c6b7a97e2e5fd79a1ed46d15"
-      def install
+      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.13/wkv_linux_amd64.tar.gz"
+      sha256 "1b38a66141e48f4d2db72ffcad769dafe154b2d55ccb24a00c50bcc85455d068"
+      define_method(:install) do
         bin.install "wkv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.12/wkv_linux_arm64.tar.gz"
-      sha256 "125031a52a77c17334308a0127b372004345d76044b552b20beb5a373e16ef88"
-      def install
+      url "https://github.com/sorafujitani/wez-kv/releases/download/v0.1.13/wkv_linux_arm64.tar.gz"
+      sha256 "45dcccbd3697890ff38396ca203a6208c5717a62e54318c1d8273f0518cb2e5a"
+      define_method(:install) do
         bin.install "wkv"
       end
     end
