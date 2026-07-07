@@ -5,23 +5,23 @@
 class Ccsession < Formula
   desc "Fuzzy session picker for claude --resume"
   homepage "https://github.com/sorafujitani/ccsession"
-  version "1.0.1"
+  version "1.1.0"
   license "MIT"
 
   depends_on "fzf"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sorafujitani/ccsession/releases/download/v1.0.1/ccsession_1.0.1_darwin_amd64.tar.gz"
-      sha256 "13d1f4bcf83b38bb150e3206d12a99cebec63544fe08c16a43cc895dc39941e9"
+      url "https://github.com/sorafujitani/ccsession/releases/download/v1.1.0/ccsession_1.1.0_darwin_amd64.tar.gz"
+      sha256 "2246ee4b72b97480fea0ae654a6eb262cfee6596eafdd918c8b59de7f969f28d"
 
       define_method(:install) do
         bin.install "ccsession"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sorafujitani/ccsession/releases/download/v1.0.1/ccsession_1.0.1_darwin_arm64.tar.gz"
-      sha256 "34919e2cef23ba51a9233d572f8217b10bc9bfee1e1177f681f3317c620b7a01"
+      url "https://github.com/sorafujitani/ccsession/releases/download/v1.1.0/ccsession_1.1.0_darwin_arm64.tar.gz"
+      sha256 "5a9aaeecd85ab1486afcf91409a1d11539b99b8252c3ce89fd2d73f8feb972c5"
 
       define_method(:install) do
         bin.install "ccsession"
@@ -31,15 +31,15 @@ class Ccsession < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorafujitani/ccsession/releases/download/v1.0.1/ccsession_1.0.1_linux_amd64.tar.gz"
-      sha256 "fc9f31f376544bcb2a76c125b94313b7bd92b776b8e5b57bc2910ef38d51fa2d"
+      url "https://github.com/sorafujitani/ccsession/releases/download/v1.1.0/ccsession_1.1.0_linux_amd64.tar.gz"
+      sha256 "4a71b6903c3bc9365a2c5940d925220297bad4eb457f8cabaae9a3d88ccf604f"
       define_method(:install) do
         bin.install "ccsession"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorafujitani/ccsession/releases/download/v1.0.1/ccsession_1.0.1_linux_arm64.tar.gz"
-      sha256 "9f4b07bf020325c2b38f4dccba5826d8f55dac252718e3752476e2607938c0f6"
+      url "https://github.com/sorafujitani/ccsession/releases/download/v1.1.0/ccsession_1.1.0_linux_arm64.tar.gz"
+      sha256 "29fa13d04d8583474eef9cc739d9b6562afd902b09ea48f81f82c723c01a5644"
       define_method(:install) do
         bin.install "ccsession"
       end
