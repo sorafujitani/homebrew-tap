@@ -1,8 +1,8 @@
 class Rt < Formula
   desc "Run Ruby-defined tasks from a discoverable CLI"
   homepage "https://github.com/sorafujitani/rt"
-  url "https://github.com/sorafujitani/rt/archive/refs/tags/v0.0.3.tar.gz"
-  sha256 "a9dcc37fb66425cc7e497b4e3d2d73e398636257d1466b860638b4f7e7812655"
+  url "https://github.com/sorafujitani/rt/archive/refs/tags/v0.0.4.tar.gz"
+  sha256 "b745a0d6b96fa08c137b45387ca1168ff99ecfeebe09687d302330afcdcebd59"
   license "MIT"
   head "https://github.com/sorafujitani/rt.git", branch: "main"
 
