@@ -1,8 +1,8 @@
 class Rt < Formula
   desc "Run Ruby-defined tasks from a discoverable CLI"
   homepage "https://github.com/sorafujitani/rt"
-  url "https://github.com/sorafujitani/rt/archive/refs/tags/v0.0.2.tar.gz"
-  sha256 "87a5b42827e9632fa626f86c2c184d65e63a358e527c200e0831df8f043cc3e3"
+  url "https://github.com/sorafujitani/rt/archive/refs/tags/v0.0.3.tar.gz"
+  sha256 "a9dcc37fb66425cc7e497b4e3d2d73e398636257d1466b860638b4f7e7812655"
   license "MIT"
   head "https://github.com/sorafujitani/rt.git", branch: "main"
 
@@ -15,7 +15,7 @@ class Rt < Formula
   end
 
   test do
-    (testpath/"tasks/greet.rb").write <<~RUBY
+    (testpath/".rt/tasks/greet.rb").write <<~RUBY
       desc "Greet someone by name"
       option :name, type: :string, default: "world", description: "who to greet"
       task "greet" do |ctx|
