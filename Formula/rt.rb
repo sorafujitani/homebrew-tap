@@ -1,8 +1,10 @@
+require "json"
+
 class Rt < Formula
   desc "Run Ruby-defined tasks from a discoverable CLI"
   homepage "https://github.com/sorafujitani/rt"
-  url "https://github.com/sorafujitani/rt/archive/refs/tags/v0.0.4.tar.gz"
-  sha256 "b745a0d6b96fa08c137b45387ca1168ff99ecfeebe09687d302330afcdcebd59"
+  url "https://github.com/sorafujitani/rt/archive/refs/tags/v0.0.5.tar.gz"
+  sha256 "9b47500b2cea4091e775a1629c89925f6c8111130b19980f23c75e848a049b77"
   license "MIT"
   head "https://github.com/sorafujitani/rt.git", branch: "main"
 
@@ -25,5 +27,11 @@ class Rt < Formula
 
     assert_match "Hello, brew!", shell_output("#{bin}/rt run greet --name brew")
     assert_match "greet", shell_output("#{bin}/rt list")
+
+    catalog = JSON.parse(shell_output("#{bin}/rt tools --json greet"))
+    assert_equal "greet", catalog.fetch("tools").first.fetch("task")
+
+    result = JSON.parse(shell_output("#{bin}/rt run --json greet --name brew"))
+    assert_equal "success", result.fetch("status")
   end
 end
