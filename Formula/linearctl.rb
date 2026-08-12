@@ -1,8 +1,8 @@
 class Linearctl < Formula
   desc "Focused terminal UI for Linear"
   homepage "https://github.com/sorafujitani/linearctl"
-  url "https://github.com/sorafujitani/linearctl/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "ea3dc7f390259fe65af8f4470ce0fdb3c2f333a8128f7f97da37eae6a4596a4b"
+  url "https://github.com/sorafujitani/linearctl/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "9a5b00f7ad1ea261c3e6b06b0589033941216df4d937f45bb232ff806d27cc65"
   license "MIT"
   head "https://github.com/sorafujitani/linearctl.git", branch: "main"
 
