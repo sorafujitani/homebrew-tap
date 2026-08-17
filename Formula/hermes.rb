@@ -17,14 +17,14 @@ class Hermes < Formula
 
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/hermes-cli")
-    (share / "hermes").install "hermes.zsh", "shells", "docs", "spec", "scripts"
+    pkgshare.install "hermes.zsh", "shells", "docs", "spec", "scripts"
   end
 
   def caveats
     <<~EOS
       Add Hermes to your Zsh startup file:
 
-        source "#{opt_share}/hermes/hermes.zsh"
+        source "#{opt_pkgshare}/hermes.zsh"
         hermes-bind-default-keys
 
       Then open a new shell and check the daemon:
