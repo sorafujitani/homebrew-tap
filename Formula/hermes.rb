@@ -1,9 +1,9 @@
 class Hermes < Formula
   desc "Rust-native stateful shell workflows for Zsh"
   homepage "https://github.com/sorafujitani/hermes.zsh"
-  url "https://github.com/sorafujitani/hermes.zsh/archive/7dd206db576700045bf2e683c453839cabc3b469.tar.gz"
+  url "https://github.com/sorafujitani/hermes.zsh/archive/c592a4054b6d02266f5ad71bb21537ed6508206a.tar.gz"
   version "0.1.0"
-  sha256 "92ebc14404e55f1499c66b2f2b59dc3e62aae62a07a3a9c0f76625673c6db776"
+  sha256 "ed8a55895e7277dd94ab63ad5a545d91ff59902594b5ad040765e45374584b82"
   license "MIT"
 
   head "https://github.com/sorafujitani/hermes.zsh.git", branch: "main"
