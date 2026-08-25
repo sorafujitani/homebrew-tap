@@ -1,8 +1,8 @@
 class Zshctl < Formula
   desc "Rust-native stateful shell workflows for Zsh"
   homepage "https://github.com/sorafujitani/zshctl"
-  url "https://github.com/sorafujitani/zshctl/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "d424b60321dfa6afb299b8f31c056f8a5f4d41f4aa560eaab1b14f46e8f8658c"
+  url "https://github.com/sorafujitani/zshctl/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "b897d094f7f95dcb04a46d6297ee2e6a280e95400d0ff70142522b811c68176a"
   license "MIT"
 
   head "https://github.com/sorafujitani/zshctl.git", branch: "main"
