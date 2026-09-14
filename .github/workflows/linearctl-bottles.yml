@@ -27,6 +27,6 @@ jobs:
         with:
           name: linearctl-bottle-${{ matrix.runner }}
           path: |
-            *.bottle.tar.gz
+            *.bottle*.tar.gz
             *.bottle.json
           if-no-files-found: error
