@@ -1,0 +1,32 @@
+name: Build linearctl bottles
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bottle:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-14, macos-15-intel]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Build and test
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: "1"
+          HOMEBREW_NO_INSTALL_CLEANUP: "1"
+        run: |
+          brew tap sorafujitani/tap
+          cp Formula/linearctl.rb "$(brew --repository sorafujitani/tap)/Formula/linearctl.rb"
+          brew install --build-bottle sorafujitani/tap/linearctl
+          brew test sorafujitani/tap/linearctl
+          version="$(brew list --versions linearctl | awk '{print $2}')"
+          brew bottle --json --root-url="https://github.com/sorafujitani/homebrew-tap/releases/download/linearctl-v${version}" sorafujitani/tap/linearctl
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: linearctl-bottle-${{ matrix.runner }}
+          path: |
+            *.bottle.tar.gz
+            *.bottle.json
+          if-no-files-found: error
