@@ -5,21 +5,21 @@
 class Policedoc < Formula
   desc "Check CLI examples in Markdown using installed executables"
   homepage "https://github.com/sorafujitani/police-doc"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sorafujitani/police-doc/releases/download/v0.2.1/policedoc_0.2.1_darwin_amd64.tar.gz"
-      sha256 "2b9bc62d0a46e0675bc428aace471ce05cb609c2e4c1f84d20e9330855c940e3"
+      url "https://github.com/sorafujitani/police-doc/releases/download/v0.3.0/policedoc_0.3.0_darwin_amd64.tar.gz"
+      sha256 "c6d1a486157c05b50b2cb0cc72ef86647227d739174f52ce27aac09a43e1ec41"
 
       define_method(:install) do
         bin.install "policedoc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sorafujitani/police-doc/releases/download/v0.2.1/policedoc_0.2.1_darwin_arm64.tar.gz"
-      sha256 "d1ca957914d20a223f0dfffbf6609429972179004fa00708c95dd938e5e0ce06"
+      url "https://github.com/sorafujitani/police-doc/releases/download/v0.3.0/policedoc_0.3.0_darwin_arm64.tar.gz"
+      sha256 "1b01bc6ab9a749ddae233cb183855b7586cbbb950171ce33f73b91157b35d99f"
 
       define_method(:install) do
         bin.install "policedoc"
@@ -29,15 +29,15 @@ class Policedoc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorafujitani/police-doc/releases/download/v0.2.1/policedoc_0.2.1_linux_amd64.tar.gz"
-      sha256 "1de066d6718fe0cf31785d92d174f62c9eae33877284e6a7bba850c55ee80fdd"
+      url "https://github.com/sorafujitani/police-doc/releases/download/v0.3.0/policedoc_0.3.0_linux_amd64.tar.gz"
+      sha256 "a7598195dfc492d991e1bfb6f1ade8c997ec8ea1fcb1503204716164594b4930"
       define_method(:install) do
         bin.install "policedoc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorafujitani/police-doc/releases/download/v0.2.1/policedoc_0.2.1_linux_arm64.tar.gz"
-      sha256 "771faad503f6cc4b137cff80edcf8b7e45298b5e687092e0e623d74ec8427cea"
+      url "https://github.com/sorafujitani/police-doc/releases/download/v0.3.0/policedoc_0.3.0_linux_arm64.tar.gz"
+      sha256 "3f5e25a7b26f66139ac2a5cc1dcbf05ae8f3f7c8d7ad61f4163950653f0da916"
       define_method(:install) do
         bin.install "policedoc"
       end
